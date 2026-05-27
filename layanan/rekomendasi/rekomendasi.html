@@ -1,0 +1,1110 @@
+# Sadarin — SaranHijau (Mobile First Smart Recommendation System)
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaranHijau - Sadarin</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(
+    180deg,
+    #f8fff5 0%,
+    #f2fff1 40%,
+    #ffffff 100%
+    );
+
+    color:#0f172a;
+
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:20px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:14px 18px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.7);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:0 15px 40px rgba(132,204,22,.08);
+}
+
+.logo-wrap{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#ecfccb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+}
+
+.logo-wrap h2{
+    color:#16a34a;
+    font-size:22px;
+}
+
+.menu{
+    width:46px;
+    height:46px;
+
+    border-radius:16px;
+
+    background:#84cc16;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:35px;
+
+    display:grid;
+    gap:30px;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.badge{
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#ecfccb;
+
+    color:#4d7c0f;
+
+    font-size:13px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:46px;
+    line-height:1.1;
+}
+
+.hero h1 span{
+    color:#65a30d;
+}
+
+.hero p{
+    color:#64748b;
+    line-height:1.9;
+}
+
+.hero-btn{
+    width:max-content;
+
+    padding:17px 28px;
+
+    border-radius:18px;
+
+    background:#84cc16;
+
+    color:white;
+
+    font-weight:600;
+
+    box-shadow:0 18px 40px rgba(132,204,22,.28);
+}
+
+/* SMART CARD */
+
+.smart-card{
+    background:white;
+
+    border-radius:35px;
+
+    padding:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(0,0,0,.04);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.05);
+}
+
+.smart-card::before{
+    content:'';
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(132,204,22,.08);
+
+    top:-90px;
+    right:-90px;
+}
+
+.smart-avatar{
+    width:180px;
+    height:180px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #bef264,
+    #65a30d
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:85px;
+
+    color:white;
+
+    box-shadow:0 25px 60px rgba(132,204,22,.35);
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
+
+}
+
+.smart-info{
+    margin-top:30px;
+
+    text-align:center;
+}
+
+.smart-info h2{
+    font-size:34px;
+    color:#65a30d;
+}
+
+.smart-info p{
+    margin-top:10px;
+
+    color:#64748b;
+    line-height:1.9;
+}
+
+/* SECTION */
+
+.section-title{
+    margin-top:50px;
+    margin-bottom:24px;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    margin-top:8px;
+
+    color:#64748b;
+}
+
+/* FORM */
+
+.form-section{
+    background:white;
+
+    border-radius:35px;
+
+    padding:25px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.05);
+}
+
+.input-grid{
+    display:grid;
+    gap:18px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:10px;
+
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding:18px;
+
+    border-radius:18px;
+
+    border:1px solid #dbe4ea;
+
+    outline:none;
+
+    font-size:15px;
+
+    resize:none;
+}
+
+.generate-btn{
+    width:100%;
+
+    margin-top:22px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#84cc16;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    box-shadow:0 18px 40px rgba(132,204,22,.25);
+}
+
+/* RESULT */
+
+.result-section{
+    margin-top:40px;
+
+    display:grid;
+    gap:20px;
+}
+
+.result-card{
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.05);
+
+    border-left:5px solid #84cc16;
+}
+
+.result-top{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.result-icon{
+    width:65px;
+    height:65px;
+
+    border-radius:20px;
+
+    background:#ecfccb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+}
+
+.result-card h3{
+    font-size:24px;
+}
+
+.result-card p{
+    margin-top:18px;
+
+    color:#64748b;
+
+    line-height:1.9;
+}
+
+/* SMART TIPS */
+
+.tips-grid{
+    margin-top:40px;
+
+    display:grid;
+    gap:18px;
+}
+
+.tip-card{
+    background:
+    linear-gradient(
+    135deg,
+    #84cc16,
+    #65a30d
+    );
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.tip-card::before{
+    content:'';
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-50px;
+    right:-50px;
+}
+
+.tip-card h3{
+    font-size:24px;
+}
+
+.tip-card p{
+    margin-top:12px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.9);
+}
+
+/* HABIT */
+
+.habit-section{
+    margin-top:50px;
+}
+
+.habit-grid{
+    display:grid;
+    gap:18px;
+}
+
+.habit-card{
+    background:white;
+
+    border-radius:28px;
+
+    padding:24px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+}
+
+.habit-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.habit-head h3{
+    font-size:20px;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+
+    border-radius:999px;
+
+    background:#ecfccb;
+
+    margin-top:18px;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #84cc16,
+    #65a30d
+    );
+}
+
+.habit-card p{
+    margin-top:12px;
+
+    color:#64748b;
+}
+
+/* WHATSAPP */
+
+.whatsapp-section{
+    margin-top:50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    );
+
+    border-radius:35px;
+
+    padding:30px;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.whatsapp-section::before{
+    content:'';
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-70px;
+    right:-70px;
+}
+
+.whatsapp-section h2{
+    font-size:36px;
+}
+
+.whatsapp-section p{
+    margin-top:14px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+}
+
+.wa-btn{
+    margin-top:24px;
+
+    padding:18px 26px;
+
+    border-radius:18px;
+
+    background:white;
+
+    color:#15803d;
+
+    font-weight:700;
+}
+
+/* TABLET */
+
+@media(min-width:768px){
+
+.container{
+    padding:35px;
+}
+
+.hero{
+    grid-template-columns:1fr 430px;
+    align-items:center;
+}
+
+.input-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.result-section{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.tips-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.habit-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* DESKTOP */
+
+@media(min-width:1200px){
+
+.hero{
+    grid-template-columns:1fr 500px;
+}
+
+.hero h1{
+    font-size:76px;
+}
+
+.section-title h2{
+    font-size:44px;
+}
+
+.result-section{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.tips-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.habit-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<nav class="navbar">
+
+<div class="logo-wrap">
+<div class="logo">💡</div>
+<h2>SADARIN</h2>
+</div>
+
+<div class="menu">☰</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" data-aos="fade-up" data-aos-delay="600">
+
+<div class="hero-content">
+
+<div class="badge">
+🌱 Rekomendasi Pintar Ramah Lingkungan
+</div>
+
+<h1>
+Temukan <span>SaranHijau</span> Untuk Hidup Lebih Baik
+</h1>
+
+<p>
+SaranHijau membantu kamu menemukan kebiasaan ramah lingkungan berdasarkan aktivitas sehari-hari secara interaktif dan personal.
+</p>
+
+<button class="hero-btn">
+Mulai Analisa Kebiasaan
+</button>
+
+</div>
+
+<div class="smart-card">
+
+<div class="smart-avatar">
+🌿
+</div>
+
+<div class="smart-info">
+<h2 id="smartLevel">Eco Smart Lv.3</h2>
+<p>
+Kamu sudah memulai langkah kecil untuk membantu bumi menjadi lebih hijau dan berkelanjutan.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<div class="section-title" data-aos="fade-up" data-aos-delay="600">
+<h2>Analisa Kebiasaan Harian</h2>
+<p>Ceritakan aktivitas harianmu dan dapatkan rekomendasi pintar dari SaranHijau.</p>
+</div>
+
+<section class="form-section" data-aos="fade-up" data-aos-delay="600">
+
+<div class="input-grid">
+
+<div class="input-group">
+<label>Jenis Sampah Dominan</label>
+<select id="wasteType">
+<option>Plastik</option>
+<option>Organik</option>
+<option>Kertas</option>
+<option>Elektronik</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Frekuensi Penggunaan Plastik</label>
+<select id="plasticUsage">
+<option>Rendah</option>
+<option>Sedang</option>
+<option>Tinggi</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Kebiasaan Daur Ulang</label>
+<select id="recycleHabit">
+<option>Jarang</option>
+<option>Kadang-kadang</option>
+<option>Sering</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Transportasi Harian</label>
+<select id="transportType">
+<option>Motor</option>
+<option>Mobil</option>
+<option>Sepeda</option>
+<option>Jalan Kaki</option>
+</select>
+</div>
+
+</div>
+
+<div class="input-group" style="margin-top:18px;">
+<label>Ceritakan Aktivitas Harianmu</label>
+<textarea id="dailyActivity" rows="5" placeholder="Contoh: Saya sering membeli minuman kemasan plastik dan jarang membawa tumbler..."></textarea>
+</div>
+
+<button class="generate-btn" id="generateBtn">
+Buat Rekomendasi Pintar ✨
+</button>
+
+</section>
+
+<!-- RESULT -->
+
+<div class="section-title" data-aos="fade-up" data-aos-delay="600">
+<h2>Rekomendasi Untukmu</h2>
+<p>Saran yang dihasilkan berdasarkan kebiasaan yang kamu masukkan.</p>
+</div>
+
+<section class="result-section" id="resultSection" data-aos="fade-up" data-aos-delay="600">
+
+<div class="result-card">
+<div class="result-top">
+<div class="result-icon">🌱</div>
+<h3>Mulai Kebiasaan Baru</h3>
+</div>
+<p>Coba mulai membawa tumbler pribadi untuk mengurangi penggunaan botol plastik sekali pakai.</p>
+</div>
+
+<div class="result-card">
+<div class="result-top">
+<div class="result-icon">♻️</div>
+<h3>Daur Ulang</h3>
+</div>
+<p>Pisahkan sampah berdasarkan jenisnya agar lebih mudah didaur ulang dan tidak mencemari lingkungan.</p>
+</div>
+
+<div class="result-card">
+<div class="result-top">
+<div class="result-icon">🚲</div>
+<h3>Transportasi Hijau</h3>
+</div>
+<p>Kurangi penggunaan kendaraan bermotor untuk jarak dekat dan gunakan sepeda atau berjalan kaki.</p>
+</div>
+
+</section>
+
+<!-- SMART TIPS -->
+
+<div class="section-title" data-aos="fade-up" data-aos-delay="600">
+<h2>Eco Smart Tips</h2>
+<p>Tips sederhana yang bisa langsung kamu lakukan hari ini.</p>
+</div>
+
+<section class="tips-grid" data-aos="fade-up" data-aos-delay="600">
+
+<div class="tip-card">
+<h3>🌿 Kurangi Plastik</h3>
+<p>Gunakan tas belanja reusable dan hindari kantong plastik sekali pakai saat berbelanja.</p>
+</div>
+
+<div class="tip-card">
+<h3>💧 Hemat Air</h3>
+<p>Matikan keran saat tidak digunakan untuk mengurangi pemborosan air bersih.</p>
+</div>
+
+<div class="tip-card">
+<h3>⚡ Hemat Energi</h3>
+<p>Cabut charger dan matikan lampu yang tidak digunakan untuk menghemat energi listrik.</p>
+</div>
+
+</section>
+
+<!-- HABIT -->
+
+<div class="section-title" data-aos="fade-up" data-aos-delay="600">
+<h2>Eco Habit Tracker</h2>
+<p>Lihat perkembangan kebiasaan ramah lingkunganmu.</p>
+</div>
+
+    <section class="habit-section" data-aos="fade-up" data-aos-delay="600">
+        <div class="habit-grid">
+            <div class="habit-card">
+                <div class="habit-head">
+                    <h3>Mengurangi Plastik</h3>
+                    <span>78%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:78%;"></div>
+                </div>
+                <p>Kamu mulai mengurangi penggunaan plastik harian.</p>
+            </div>
+            <div class="habit-card">
+                <div class="habit-head">
+                    <h3>Daur Ulang</h3>
+                    <span>62%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:62%;"></div>
+                </div>
+                <p>Kebiasaan memilah sampah semakin meningkat.</p>
+            </div>
+            <div class="habit-card">
+                <div class="habit-head">
+                    <h3>Transportasi Hijau</h3>
+                    <span>41%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:41%;"></div>
+                </div>
+                <p>Mulai gunakan transportasi yang lebih ramah lingkungan.</p>
+            </div>
+            <div class="habit-card">
+                <div class="habit-head">
+                    <h3>Hemat Energi</h3>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:85%;"></div>
+                </div>
+                <p>Kamu sudah cukup baik dalam menghemat energi harian.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- WHATSAPP -->
+
+    <section class="whatsapp-section" data-aos="fade-up" data-aos-delay="600">
+        <h2>Konsultasi Langsung Dengan Sadarin 🌎</h2>
+        <p>
+            Masih ingin mendapatkan rekomendasi yang lebih personal? Hubungi tim Sadarin dan konsultasikan kebiasaan ramah lingkunganmu.
+        </p>
+        <button class="wa-btn" id="waBtn">
+            Konsultasi via WhatsApp
+        </button>
+    </section>
+
+</div>
+
+<script>
+
+const generateBtn = document.getElementById('generateBtn');
+const resultSection = document.getElementById('resultSection');
+const smartLevel = document.getElementById('smartLevel');
+const waBtn = document.getElementById('waBtn');
+
+const recommendations = {
+
+Plastik:[
+{
+icon:'🧴',
+title:'Kurangi Botol Plastik',
+desc:'Gunakan tumbler dan wadah minum reusable untuk mengurangi limbah plastik harian.'
+},
+{
+icon:'🛍️',
+title:'Gunakan Tas Reusable',
+desc:'Biasakan membawa tas belanja sendiri saat pergi ke supermarket atau minimarket.'
+},
+{
+icon:'♻️',
+title:'Pisahkan Sampah Plastik',
+desc:'Pisahkan sampah plastik agar lebih mudah didaur ulang dan tidak mencemari lingkungan.'
+}
+],
+
+Organik:[
+{
+icon:'🥬',
+title:'Buat Kompos',
+desc:'Manfaatkan sampah organik rumah tangga menjadi pupuk kompos alami.'
+},
+{
+icon:'🌱',
+title:'Kurangi Sisa Makanan',
+desc:'Ambil makanan secukupnya agar mengurangi limbah makanan harian.'
+},
+{
+icon:'🍃',
+title:'Gunakan Eco Enzyme',
+desc:'Olahan sampah organik bisa dimanfaatkan menjadi cairan pembersih alami.'
+}
+],
+
+Kertas:[
+{
+icon:'📄',
+title:'Gunakan Digital Note',
+desc:'Kurangi penggunaan kertas dengan beralih ke catatan digital.'
+},
+{
+icon:'🌳',
+title:'Daur Ulang Kardus',
+desc:'Pisahkan kardus dan kertas bekas agar dapat digunakan kembali.'
+},
+{
+icon:'🖨️',
+title:'Cetak Dua Sisi',
+desc:'Gunakan kedua sisi kertas untuk menghemat penggunaan bahan baku.'
+}
+],
+
+Elektronik:[
+{
+icon:'🔋',
+title:'Buang E-Waste Dengan Benar',
+desc:'Jangan membuang limbah elektronik sembarangan karena mengandung zat berbahaya.'
+},
+{
+icon:'⚡',
+title:'Hemat Energi',
+desc:'Cabut perangkat elektronik saat tidak digunakan untuk menghemat listrik.'
+},
+{
+icon:'💻',
+title:'Gunakan Perangkat Lebih Lama',
+desc:'Kurangi pergantian gadget terlalu sering untuk mengurangi limbah elektronik.'
+}
+]
+
+};
+
+function createRecommendation(data){
+
+return `
+
+<div class="result-card">
+
+<div class="result-top">
+<div class="result-icon">${data.icon}</div>
+<h3>${data.title}</h3>
+</div>
+
+<p>${data.desc}</p>
+
+</div>
+
+`;
+
+}
+
+generateBtn.addEventListener('click', () => {
+
+const wasteType = document.getElementById('wasteType').value;
+const plasticUsage = document.getElementById('plasticUsage').value;
+const recycleHabit = document.getElementById('recycleHabit').value;
+const transportType = document.getElementById('transportType').value;
+const dailyActivity = document.getElementById('dailyActivity').value;
+
+if(dailyActivity === ''){
+alert('Ceritakan aktivitas harianmu terlebih dahulu');
+return;
+}
+
+resultSection.innerHTML = '';
+
+recommendations[wasteType].forEach(item => {
+
+resultSection.innerHTML += createRecommendation(item);
+
+});
+
+if(plasticUsage === 'Tinggi'){
+
+resultSection.innerHTML += createRecommendation({
+icon:'🚫',
+title:'Kurangi Plastik Sekali Pakai',
+desc:'Kebiasaan penggunaan plastikmu cukup tinggi. Mulai gunakan produk reusable untuk mengurangi limbah harian.'
+});
+
+}
+
+if(recycleHabit === 'Jarang'){
+
+resultSection.innerHTML += createRecommendation({
+icon:'♻️',
+title:'Mulai Daur Ulang',
+desc:'Cobalah mulai memilah sampah organik dan anorganik agar lebih mudah dikelola.'
+});
+
+}
+
+if(transportType === 'Mobil'){
+
+resultSection.innerHTML += createRecommendation({
+icon:'🚲',
+title:'Gunakan Transportasi Alternatif',
+desc:'Kurangi penggunaan kendaraan pribadi untuk membantu mengurangi emisi karbon.'
+});
+
+}
+
+let level = 'Eco Smart Lv.1';
+
+if(recycleHabit === 'Sering'){
+level = 'Eco Smart Lv.5';
+}
+
+if(plasticUsage === 'Rendah'){
+level = 'Eco Smart Lv.7';
+}
+
+smartLevel.innerText = level;
+
+localStorage.setItem('sadarinRecommendation', JSON.stringify({
+
+wasteType,
+plasticUsage,
+recycleHabit,
+transportType,
+dailyActivity
+
+}));
+
+window.scrollTo({
+
+top:resultSection.offsetTop - 100,
+behavior:'smooth'
+
+});
+
+});
+
+waBtn.addEventListener('click', () => {
+
+const wasteType = document.getElementById('wasteType').value;
+const plasticUsage = document.getElementById('plasticUsage').value;
+const recycleHabit = document.getElementById('recycleHabit').value;
+const transportType = document.getElementById('transportType').value;
+const dailyActivity = document.getElementById('dailyActivity').value;
+
+const message = `Halo Sadarin 🌱%0A%0ASaya ingin konsultasi terkait kebiasaan ramah lingkungan saya.%0A%0AJenis Sampah: ${wasteType}%0APenggunaan Plastik: ${plasticUsage}%0AKebiasaan Daur Ulang: ${recycleHabit}%0ATransportasi Harian: ${transportType}%0A%0AAktivitas:%0A${dailyActivity}`;
+
+window.open(`https://wa.me/6281234567890?text=${message}`,'_blank');
+
+});
+
+</script>
+
+<!-- AOS tetap -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+</script>
+
+</body>
+</html>
+```
