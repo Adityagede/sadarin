@@ -9,322 +9,296 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="bumi.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="icon" href="../../assets/logo.png">
 
 </head>
 <body>
 
-<div class="container">
+    <a  href="https://wa.me/6281246890251"
+   target="_blank"
+   class="sadarin-float"
+   rel="noopener noreferrer"
+   aria-label="floating-wa">
+    <!-- GLOW -->
+    <div class="wa-glow"></div>
 
-<!-- NAVBAR -->
+    <!-- FLOATING PARTICLES -->
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
 
-<nav class="navbar">
 
-<div class="logo-wrap">
-<div class="logo">🌍</div>
-<h2>SADARIN</h2>
+    <!-- MAIN BUTTON -->
+    <div class="wa-premium-btn">
+
+        <!-- LIQUID BG -->
+        <div class="liquid"></div>
+
+        <!-- ICON -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="white"
+            viewBox="0 0 24 24">
+
+            <path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.47 0 .12 5.35.12 11.94c0 2.1.55 4.15 1.6 5.97L0 24l6.3-1.65a11.88 11.88 0 005.76 1.47h.01c6.59 0 11.94-5.35 11.94-11.94 0-3.19-1.24-6.18-3.49-8.4z"/>
+        </svg>
+
+    </div>
+
+</a>
+
+    <header>
+     
+    <div class="mobile-menu" id="mobileMenu">
+         <div class="menu-close" id="menuClose">
+                 <span></span>
+                <span></span>
+                 </div>
+        <div class="mobile-card">
+            <a href="index.html" class="active">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 10L12 3L21 10V20H3V10Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                Beranda
+            </a>
+            <a href="tentang/tentang.html">
+                <svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 21C4 16 20 16 20 21" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                Tentang Kami
+            </a>
+            <div class="mobile-dropdown">
+    <div class="mobile-dropdown-btn">
+        <svg class="nav-icon" viewBox="0 0 24 24">
+            <path d="M12 2L15 8H9L12 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+
+        <span>Layanan</span>
+
+        <svg class="dropdown-arrow" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <div class="mobile-dropdown-content">
+        <a href="layanan/jejak/jejak.html"><img src="asset/img/naik.png" alt="">JejakHijau</a>
+        <a href="layanan/analisa/analisa.html"><img src="/asset/img/bumi 2.png" alt="">BumiMeter</a>
+        <a href="layanan/tracer/tracer.html"><img src="/asset/img/kilometer 2.png" alt="">SadarPoint</a>
+        <a href="layanan/rekomendasi/rekomendasi.html"><img src="/asset/img/manusia 2.png" alt="">SaranHijau</a>
+    </div>
+
 </div>
+            <a href="kontak/kontak.html">
+                <svg class="nav-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                Kontak
+            </a>
+        </div>
+    </div>
 
-<div class="menu">☰</div>
+<nav class="navbar" data-aos="fade-down" data-aos-delay="300">
+    <ul class="nav-links">
+        <li class="brand">
+            <img src="asset/logo/logo1.png" alt="Logo SADARIN" class="logo" loading="lazy">
+            <span class="sa-head">SADARIN</span> </li>
+        <li class="li-head">
+            <a href="index.html">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 10L12 3L21 10V20H3V10Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>Beranda
+            </a>
+        </li>
+        <li class="li-head">
+            <a href="tentang/tentang.html">
+                <svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 21C4 16 20 16 20 21" stroke="currentColor" stroke-width="2" fill="none"/></svg>Tentang Kami
+            </a>
+        </li>
+       <li class="li-head dropdown">
+    <a href="#">
+        <svg class="nav-icon" viewBox="0 0 24 24">
+            <path d="M12 2L15 8H9L12 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        Layanan
+        <svg class="dropdown-arrow" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+    </a>
+    
 
+    <ul class="dropdown-menu">
+        <li><a href="layanan/jejak/jejak.html"><img src="asset/img/naik.png" alt="">jejakHijau</a></li>
+        <li><a href="layanan/bumi/bumi.html"><img src="asset/img/bumi 2.png" alt="">BumiMeter</a></li>
+        <li><a href="layanan/tracer/tracer.html"><img src="asset/img/kilometer 2.png" alt="">SadarPoint</a></li>
+        <li><a href="layanan/rekomendasi/rekomendasi.html"><img src="asset/img/manusia 2.png" alt="">SaranHijau</a></li>
+    </ul>
+</li>
+        <li class="li-head">
+            <a href="kontak/kontak.html">
+                <svg class="nav-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>Kontak
+            </a>
+        </li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 
-<!-- HERO -->
+<div class="menu-overlay" id="menuOverlay"></div>
+    </header> 
 
-<section class="hero" data-aos="fade-up" data-aos-delay="600">
 
-<div class="hero-content">
-
-<div class="badge">
-🌎 Simulasi Dampak Lingkungan
-</div>
-
-<h1>
-Kenali Dampak <span>Sampah</span> Terhadap Bumi
-</h1>
-
-<p>
-BumiMeter membantu kamu memahami bagaimana jenis sampah memengaruhi lingkungan melalui simulasi interaktif yang modern dan edukatif.
-</p>
-
-<button class="hero-btn">
-Mulai Simulasi
-</button>
-
-</div>
-
-<div class="earth-card">
-
-<div class="planet">
-<div class="land land1"></div>
-<div class="land land2"></div>
-<div class="land land3"></div>
-</div>
-
-<div class="earth-info">
-<h2 id="earthHealth">82%</h2>
-<p>Kondisi bumi berdasarkan simulasi aktivitas lingkungan yang kamu lakukan hari ini.</p>
-</div>
-
-</div>
-
-</section>
+<div class="container">   
+    <section class="hero" data-aos="fade-up" data-aos-delay="600">
+        <div class="hero-content">
+            <h1>
+                Kenali Dampak <span>Sampah</span> Terhadap Bumi
+            </h1>
+            <p>
+                BumiMeter membantu kamu memahami bagaimana jenis sampah memengaruhi lingkungan melalui simulasi interaktif yang modern dan edukatif.
+            </p>
+            <button class="hero-btn">
+                Mulai Simulasi
+        </button>
+        </div>
+        <div class="earth-card">
+            <div class="planet">
+                <div class="land land1"></div>
+                <div class="land land2"></div>
+                <div class="land land3"></div>
+            </div>
+            <div class="earth-info">
+                <h2 id="earthHealth">82%</h2>
+                <p>Kondisi bumi berdasarkan simulasi aktivitas lingkungan yang kamu lakukan hari ini.</p>
+            </div>
+        </div>
+    </section>
 
 <!-- SIMULATION -->
 
-<div class="section-title" data-aos="fade-up" data-aos-delay="600">
-<h2>Pilih Jenis Sampah</h2>
-<p>Setiap jenis sampah memiliki dampak lingkungan yang berbeda.</p>
-</div>
+    <div class="section-title" data-aos="fade-up" data-aos-delay="600">
+        <h2>Pilih Jenis Sampah</h2>
+        <p>Setiap jenis sampah memiliki dampak lingkungan yang berbeda.</p>
+    </div>
 
-<div class="simulation-grid">
-
-<div class="simulation-card active" data-type="Plastik">
-<div class="sim-top">
-<div class="sim-icon blue">🧴</div>
-<h3>Plastik</h3>
-</div>
-<p>Membutuhkan ratusan tahun untuk terurai dan berpotensi mencemari laut.</p>
-</div>
-
-<div class="simulation-card" data-type="Organik">
-<div class="sim-top">
-<div class="sim-icon green">🥬</div>
-<h3>Organik</h3>
-</div>
-<p>Dapat terurai alami namun menghasilkan gas metana jika menumpuk.</p>
-</div>
-
-<div class="simulation-card" data-type="Kertas">
-<div class="sim-top">
-<div class="sim-icon yellow">📄</div>
-<h3>Kertas</h3>
-</div>
-<p>Bisa didaur ulang dan membantu mengurangi penebangan pohon.</p>
-</div>
-
-<div class="simulation-card" data-type="Elektronik">
-<div class="sim-top">
-<div class="sim-icon red">🔋</div>
-<h3>Elektronik</h3>
-</div>
-<p>Mengandung zat berbahaya yang dapat mencemari tanah dan air.</p>
-</div>
-
-</div>
+    <div class="simulation-grid">
+        <div class="simulation-card active" data-type="Plastik">
+            <div class="sim-top">
+                <div class="sim-icon blue">🧴</div>
+                <h3>Plastik</h3>
+            </div>
+            <p>Membutuhkan ratusan tahun untuk terurai dan berpotensi mencemari laut.</p>
+        </div>
+        <div class="simulation-card" data-type="Organik">
+            <div class="sim-top">
+                <div class="sim-icon green">🥬</div>
+                <h3>Organik</h3>
+            </div>
+            <p>Dapat terurai alami namun menghasilkan gas metana jika menumpuk.</p>
+        </div>
+        <div class="simulation-card" data-type="Kertas">
+            <div class="sim-top">
+                <div class="sim-icon yellow">📄</div>
+                <h3>Kertas</h3>
+            </div>
+            <p>Bisa didaur ulang dan membantu mengurangi penebangan pohon.</p>
+        </div>
+        <div class="simulation-card" data-type="Elektronik">
+            <div class="sim-top">
+                <div class="sim-icon red">🔋</div>
+                <h3>Elektronik</h3>
+            </div>
+            <p>Mengandung zat berbahaya yang dapat mencemari tanah dan air.</p>
+        </div>
+    </div>
 
 <!-- ANALYSIS -->
 
-<section class="analysis-wrap" data-aos="fade-up" data-aos-delay="600">
-
-<h2>Mulai Simulasi Dampak</h2>
-
-<div class="analysis-grid">
-
-<div class="input-group">
-<label>Jenis Sampah</label>
-<select id="wasteType">
-<option>Plastik</option>
-<option>Organik</option>
-<option>Kertas</option>
-<option>Elektronik</option>
-</select>
-</div>
-
-<div class="input-group">
-<label>Jumlah Sampah (kg)</label>
-<input type="number" id="wasteAmount" placeholder="Masukkan jumlah...">
-</div>
-
-</div>
-
-<button class="analyze-btn" id="analyzeBtn">
-Analisa Dampak 🌍
-</button>
-
-<div class="result-card">
-
-<h2 id="resultTitle">Dampak Plastik</h2>
-
-<p id="resultDesc">
-Sampah plastik membutuhkan waktu sangat lama untuk terurai dan dapat mencemari lingkungan laut.
-</p>
-
-<div class="result-grid">
-
-<div class="result-box">
-<h3 id="decomposeTime">450</h3>
-<p>Tahun Terurai</p>
-</div>
-
-<div class="result-box">
-<h3 id="co2Impact">12kg</h3>
-<p>Estimasi CO₂</p>
-</div>
-
-<div class="result-box">
-<h3 id="earthImpact">34%</h3>
-<p>Dampak Lingkungan</p>
-</div>
-
-<div class="result-box">
-<h3 id="ecoAction">3</h3>
-<p>Saran Perbaikan</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
+    <section class="analysis-wrap" data-aos="fade-up" data-aos-delay="600">
+        <h2>Mulai Simulasi Dampak</h2>
+        <div class="analysis-grid">
+            <div class="input-group">
+                <label>Jenis Sampah</label>
+                <select id="wasteType">
+                    <option>Plastik</option>
+                    <option>Organik</option>
+                    <option>Kertas</option>
+                    <option>Elektronik</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Jumlah Sampah (kg)</label>
+                <input type="number" id="wasteAmount" placeholder="Masukkan jumlah...">
+            </div>
+        </div>
+        <button class="analyze-btn" id="analyzeBtn">
+            Analisa Dampak 🌍
+        </button>
+            <div class="result-card">
+                <h2 id="resultTitle">Dampak Plastik</h2>
+                <p id="resultDesc">
+                    Sampah plastik membutuhkan waktu sangat lama untuk terurai dan dapat mencemari lingkungan laut.
+                </p>
+                <div class="result-grid">
+                    <div class="result-box">
+                        <h3 id="decomposeTime">450</h3>
+                        <p>Tahun Terurai</p>
+                    </div>
+                    <div class="result-box">
+                        <h3 id="co2Impact">12kg</h3>
+                        <p>Estimasi CO₂</p>
+                    </div>
+                    <div class="result-box">
+                        <h3 id="earthImpact">34%</h3>
+                        <p>Dampak Lingkungan</p>
+                    </div>
+                    <div class="result-box">
+                        <h3 id="ecoAction">3</h3>
+                        <p>Saran Perbaikan</p>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 <!-- FACT -->
 
-<div class="section-title" data-aos="fade-up" data-aos-delay="600">
-<h2>Fakta Lingkungan</h2>
-<p>Pelajari fakta penting tentang dampak sampah terhadap bumi.</p>
-</div>
-
-<section class="fact-section" data-aos="fade-up" data-aos-delay="600"> 
-
-<div class="fact-grid">
-
-<div class="fact-card">
-<h3>🌊 Laut Tercemar</h3>
-<p>Jutaan ton sampah plastik masuk ke laut setiap tahunnya dan membahayakan ekosistem laut.</p>
-</div>
-
-<div class="fact-card">
-<h3>🌳 Daur Ulang</h3>
-<p>Mendaur ulang satu ton kertas dapat menyelamatkan hingga 17 pohon.</p>
-</div>
-
-<div class="fact-card">
-<h3>⚡ Elektronik</h3>
-<p>Limbah elektronik mengandung bahan kimia yang berbahaya jika dibuang sembarangan.</p>
-</div>
-
-<div class="fact-card">
-<h3>♻️ Organik</h3>
-<p>Sampah organik dapat dimanfaatkan kembali menjadi kompos yang bermanfaat.</p>
-</div>
+    <div class="section-title" data-aos="fade-up" data-aos-delay="600">
+        <h2>Fakta Lingkungan</h2>
+        <p>Pelajari fakta penting tentang dampak sampah terhadap bumi.</p>
+    </div>
+    <section class="fact-section" data-aos="fade-up" data-aos-delay="600"> 
+        <div class="fact-grid">
+            <div class="fact-card">
+                <h3>🌊 Laut Tercemar</h3>
+                <p>Jutaan ton sampah plastik masuk ke laut setiap tahunnya dan membahayakan ekosistem laut.</p>
+            </div>
+            <div class="fact-card">
+                <h3>🌳 Daur Ulang</h3>
+                <p>Mendaur ulang satu ton kertas dapat menyelamatkan hingga 17 pohon.</p>
+            </div>
+            <div class="fact-card">
+                <h3>⚡ Elektronik</h3>
+                <p>Limbah elektronik mengandung bahan kimia yang berbahaya jika dibuang sembarangan.</p>
+            </div>
+            <div class="fact-card">
+                <h3>♻️ Organik</h3>
+                <p>Sampah organik dapat dimanfaatkan kembali menjadi kompos yang bermanfaat.</p>
+            </div>
+        </div>
+    </section>
 
 </div>
+ <script type="module" src="index.js"></script>
 
-</section>
-
-</div>
+<!-- AOS tetap -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-
-const simulationCards = document.querySelectorAll('.simulation-card');
-const wasteType = document.getElementById('wasteType');
-const analyzeBtn = document.getElementById('analyzeBtn');
-
-const resultTitle = document.getElementById('resultTitle');
-const resultDesc = document.getElementById('resultDesc');
-const decomposeTime = document.getElementById('decomposeTime');
-const co2Impact = document.getElementById('co2Impact');
-const earthImpact = document.getElementById('earthImpact');
-const ecoAction = document.getElementById('ecoAction');
-const earthHealth = document.getElementById('earthHealth');
-
-simulationCards.forEach(card => {
-
-card.addEventListener('click', () => {
-
-simulationCards.forEach(c => c.classList.remove('active'));
-card.classList.add('active');
-
-const selected = card.dataset.type;
-
-wasteType.value = selected;
-
-});
-
-});
-
-const wasteData = {
-
-Plastik:{
-
-time:'450',
-co2:6,
-impact:88,
-action:4,
-health:60,
-
-desc:'Sampah plastik membutuhkan waktu sangat lama untuk terurai dan dapat mencemari lingkungan laut serta tanah.'
-
-},
-
-Organik:{
-
-time:'2',
-co2:2,
-impact:30,
-action:2,
-health:90,
-
-desc:'Sampah organik lebih mudah terurai namun tetap menghasilkan gas metana jika tidak dikelola dengan baik.'
-
-},
-
-Kertas:{
-
-time:'5',
-co2:3,
-impact:24,
-action:2,
-health:94,
-
-desc:'Kertas dapat didaur ulang sehingga membantu mengurangi penebangan pohon dan limbah lingkungan.'
-
-},
-
-Elektronik:{
-
-time:'1000',
-co2:10,
-impact:95,
-action:5,
-health:40,
-
-desc:'Limbah elektronik mengandung zat berbahaya yang dapat mencemari air dan tanah jika dibuang sembarangan.'
-
-}
-
-};
-
-analyzeBtn.addEventListener('click', () => {
-
-const selectedType = wasteType.value;
-const amount = document.getElementById('wasteAmount').value;
-
-if(amount === ''){
-alert('Masukkan jumlah sampah terlebih dahulu');
-return;
-}
-
-const data = wasteData[selectedType];
-
-const totalCo2 = data.co2 * amount;
-const totalImpact = data.impact + Number(amount);
-const health = data.health - amount;
-
-resultTitle.innerText = 'Dampak ' + selectedType;
-resultDesc.innerText = data.desc;
-
-decomposeTime.innerText = data.time;
-co2Impact.innerText = totalCo2 + 'kg';
-earthImpact.innerText = totalImpact + '%';
-ecoAction.innerText = data.action;
-
-earthHealth.innerText = health + '%';
-
-});
-
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
 </script>
-
 </body>
 </html>
 ```

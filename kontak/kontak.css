@@ -771,6 +771,7 @@ header {
     transition: all 0.4s ease;
 }
 
+
 .mobile-dropdown-content img {
     width: 30px;
 }
@@ -809,6 +810,58 @@ header {
     color: white;
     transform: translateX(4px);
 }
+
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 15px;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f3f3f3;
+    color: #2ea043;
+}
+
+.dropdown-menu li a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 
 
 /* =========================================
@@ -919,7 +972,7 @@ transform:translateY(-2px);
 
     width: 100%;
 
-    min-height: 90dvh;
+    min-height: 80dvh;
 
     overflow: hidden;
 
@@ -994,28 +1047,6 @@ transform:translateY(-2px);
         );
 
     z-index: 2;
-}
-
-/* SMOOTH BLEND */
-.kontak-hero::after{
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -1px;
-
-    width: 100%;
-    height: 100px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            #ffff
-        );
-
-    z-index: 5;
 }
 
 /* =========================================
@@ -1523,12 +1554,10 @@ transform:translateY(-2px);
 ========================================= */
 
 .hero-about{
+    margin-top: 50px;
     position: relative;
-
     padding: 60px 20px;
-
-    background: #45a049;
-
+    background: #f6fff8;
     overflow: hidden;
 }
 
@@ -1547,7 +1576,7 @@ transform:translateY(-2px);
 
     line-height: 1.2;
 
-    color: white;
+    color: #333;
 
     margin-bottom: 20px;
 }
@@ -1555,7 +1584,7 @@ transform:translateY(-2px);
 .hero-about-content p{
     font-size: 1.4rem;
     font-weight: bold;
-    color: #253439;
+    color: #0f9d2f;
 }
 
 /* =========================================
@@ -1583,7 +1612,6 @@ transform:translateY(-2px);
 
     display: block;
 }
-
 
 .footer {
     margin-top: 40px;
@@ -1805,6 +1833,24 @@ transition:all .35s ease;
     padding-left: 60px;
 }
 
+
+.hero-about{
+    padding: 60px 20px;
+    display:flex;
+    gap:200px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.hero-about-image{
+    margin-top: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    border:5px solid #dfe7e2;
+}
+
 /*========================
         footer
 =========================*/
@@ -1901,6 +1947,11 @@ transition:all .35s ease;
 }
 
 /* =========================
+ipad mini
+========================= */
+
+
+/* =========================
 ipad air
 ========================= */
 @media (min-width:820px){
@@ -1930,8 +1981,6 @@ gap: 40px;
 .mobile-card{
 width:92%;
 }
-
-
 
 
 
@@ -1979,9 +2028,19 @@ transition:all .35s ease;
     padding-left: 90px;
 }
 
+.kontak-content h1{
+    font-size: 50px;
+}
+
+.kontak-content p{
+    font-size: 25px;
+}
+
 
 
 }
+
+
 
 
 /* =========================
@@ -2064,38 +2123,34 @@ border-radius:4px;
 transition:all .35s ease;
 }
 
-.impact-list
-{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+/* info kontak */
 
-.impact-header p{
-    text-align: center;
-    width: 80%;
-}
-
-.tentang-hero-content {
-    text-align: center;
-    padding-left: 40px;
+.main-gabungan{
+    display:flex;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 
-.tentang-hero-content h1{
-    font-size: 50px;
-    width: 90%;
-    text-align: center;
-    padding-left: 90px;
+
+.contact-card{
+    margin-top: -100px;
 }
 
-.revolusi-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    align-items: center;
+.hero-about{
+padding: 60px 20px;
+display:flex;
 }
 
-.social{
-    margin-right: 50px;
+.hero-about-content {
+    padding-left: 80px;
+}
+
+.hero-about-image{
+margin-top: 0;
+width: 50%;
+
+max-width: 500px;
 }
 
 /* ======FOOTER====== */ 
@@ -2164,6 +2219,25 @@ DESKTOP
     .hamburger {
         display: none;
     }
+
+
+/* ======INFO KONTAK====== */ 
+.main-gabungan{
+    
+    
+    }
+
+.kontak-sec{
+
+    width: 40%;
+}
+
+.contact-section{
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+
 
 .footer {
     padding: 20px 50px;
