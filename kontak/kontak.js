@@ -271,7 +271,7 @@ form.addEventListener("submit",(e)=>{
     document.getElementById("message").value;
 
     const phone =
-    "6281246890251";
+    "+6285180676238";
 
     // MESSAGE TEMPLATE
     const text =
