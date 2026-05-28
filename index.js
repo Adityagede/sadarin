@@ -281,11 +281,11 @@ form.addEventListener("submit", function(e){
     const message = form.querySelector('textarea[name="message"]').value;
 
     // NOMOR WHATSAPP
-    const phoneNumber = "6281246890251";
+    const phoneNumber = "6285180676238";
 
     // FORMAT PESAN
     const whatsappMessage = 
-`Halo Sadarin 🌿
+`Halo Sadarin 
 
 Nama : ${name}
 Email : ${email}

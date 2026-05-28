@@ -2223,19 +2223,47 @@ DESKTOP
 
 /* ======INFO KONTAK====== */ 
 .main-gabungan{
-    
+    display:flex;
     
     }
 
 .kontak-sec{
-
     width: 40%;
+    
+}
+
+.kontak-card{
+    margin-top: -100px;
+    height: 735px;
 }
 
 .contact-section{
-    display: flex;
+    margin-top: -100px;
     width: 100%;
     height: 10%;
+    
+}
+
+
+.contact-header h2{
+    font-size: 27px;
+}
+
+.contact-header p{
+    padding-top: -10px;
+    font-size: 18px;
+}
+
+#whatsappForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    row-gap: 2px;
+}
+
+#whatsappForm .form-group:nth-child(n+3),
+#whatsappForm .send-btn {
+    grid-column: 1 / -1;
 }
 
 
