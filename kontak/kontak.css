@@ -2222,6 +2222,7 @@ DESKTOP
 
 
 /* ======INFO KONTAK====== */ 
+
 .main-gabungan{
     display:flex;
     
@@ -2266,6 +2267,29 @@ DESKTOP
     grid-column: 1 / -1;
 }
 
+/* ======BERGABUNG====== */ 
+.hero-about{
+padding: 50px 20px;
+display:flex;
+}
+
+.hero-about-content {
+    padding-left: 60px;
+}
+
+.hero-about-content h1{
+    padding-top: 20px;
+}
+
+.hero-about-image{
+margin-top: 0;
+width: 50%;
+height: 40%;
+
+max-width: 490px;
+}
+
+/* ======FOOTER====== */ 
 
 .footer {
     padding: 20px 50px;
