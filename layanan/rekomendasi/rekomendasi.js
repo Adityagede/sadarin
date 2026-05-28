@@ -192,7 +192,7 @@ const dailyActivity = document.getElementById('dailyActivity').value;
 
 const message = `Halo Sadarin 🌱%0A%0ASaya ingin konsultasi terkait kebiasaan ramah lingkungan saya.%0A%0AJenis Sampah: ${wasteType}%0APenggunaan Plastik: ${plasticUsage}%0AKebiasaan Daur Ulang: ${recycleHabit}%0ATransportasi Harian: ${transportType}%0A%0AAktivitas:%0A${dailyActivity}`;
 
-window.open(`https://wa.me/6281234567890?text=${message}`,'_blank');
+window.open(`https://wa.me/6285180676238?text=${message}`,'_blank');
 
 });
 

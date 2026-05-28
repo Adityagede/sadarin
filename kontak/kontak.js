@@ -1,33 +1,5 @@
 
 
-
-/* FLOATING SADARPOINT SYSTEM */
-
-const floatingScore = document.getElementById('floatingScore');
-
-function updateFloatingPoint(){
-
-const activities = JSON.parse(
-localStorage.getItem('sadarinActivities')
-) || [];
-
-let totalPoint = 0;
-
-activities.forEach(activity => {
-
-const point = Math.floor(activity.amount * 10);
-
-totalPoint += point;
-
-});
-
-floatingScore.innerText = totalPoint;
-
-}
-
-updateFloatingPoint();
-
-
 // =========================================
 // SADARIN ULTRA PREMIUM INTERACTIVE WA
 // =========================================
