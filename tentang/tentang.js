@@ -205,85 +205,16 @@ setInterval(changeHeroImage,6500);
 
 
 
+const impactItems = document.querySelectorAll(".impact-item");
 
+impactItems.forEach((item) => {
+    item.addEventListener("click", () => {
 
-
-//float angka
-const counter = document.getElementById("floatAngka");
-
-const target = 12;
-let started = false;
-
-function animateCounter() {
-    const duration = 3000; // 3 detik
-    const startTime = performance.now();
-
-    function updateCounter(currentTime) {
-        const elapsedTime = currentTime - startTime;
-
-        // progress dari 0 - 1
-        let progress = elapsedTime / duration;
-
-        // biar geraknya smooth
-        progress = Math.min(progress, 1);
-
-        // easing smooth
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-
-        const currentValue = Math.floor(easeOut * target);
-
-        counter.innerText = `+${currentValue}K`;
-
-        if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.innerText = `+${target}K`;
-        }
-    }
-
-    requestAnimationFrame(updateCounter);
-}
-
-// jalan saat muncul di layar
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting && !started) {
-            started = true;
-            animateCounter();
-        }
-    });
-}, {
-    threshold: 0.5
-});
-
-observer.observe(counter);
-
-
-
-// =========================================
-// IMPACT CARD INTERACTIVE
-// =========================================
-
-const impactItems =
-document.querySelectorAll(".impact-item");
-
-// LOOP
-impactItems.forEach((item)=>{
-
-    item.addEventListener("click",()=>{
-
-        // REMOVE ACTIVE
-        impactItems.forEach((card)=>{
-
+        impactItems.forEach((card) => {
             card.classList.remove("active");
-
         });
 
-        // ACTIVE CURRENT
         item.classList.add("active");
 
     });
-
 });
-
-const partner = document.querySelector("partner")

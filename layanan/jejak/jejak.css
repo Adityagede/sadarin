@@ -1323,7 +1323,7 @@ transform:translateY(-2px);
 .impact-card{
     margin-top:40px;
 
-     background-image: url('/asset/img/jejak-bersama.jpg');
+     background-image: url('../../asset/img/jejak-bersama.jpg');
     background-size: cover;
     object-fit: cover;
     border-radius:32px;
