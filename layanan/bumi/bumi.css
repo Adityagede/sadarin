@@ -1157,18 +1157,19 @@ button{
 
 .analyze-btn{
     width:100%;
-
     padding:18px;
-
     border-radius: 10px;
     background:#1591DC;;
-
     color:white;
-
     font-size:16px;
     font-weight:600;
+    transition: all 0.3s ease;
+}
 
-    box-shadow:0 18px 40px rgba(59,130,246,.25);
+.analyze-btn:hover{
+    background:#0c71a8;
+    box-shadow:0 12px 30px rgba(21,145,220,.25);
+   transform: scale(1.01);
 }
 
 /* RESULT */

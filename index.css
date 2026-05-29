@@ -799,6 +799,10 @@ header {
 transform:translateY(-2px);
 }
 
+.li-head a.active  {
+    color: var(--primary);
+}
+
 .li-head a:hover .nav-icon {
     transform: scale(1.2);
 }
@@ -2256,18 +2260,15 @@ textarea:focus::placeholder {
 
 /* TABLET MINI */
 @media (min-width: 640px) {
-    .service-showcase {
+   .service-showcase {
         padding: 95px 32px;
     }
-
     .service-header {
         max-width: 650px;
     }
-
     .service-header h2 {
         font-size: 38px;
     }
-
     .service-card {
         padding: 26px;
     }
@@ -2449,6 +2450,18 @@ transition:all .35s ease;
     width: 70px;
     margin-bottom: 10px;
 }
+
+.service-grid {
+        gap: 22px;
+    }
+
+    .service-header h2 {
+        font-size: 44px;
+    }
+
+    .service-header p {
+        font-size: 16px;
+    }   
 
 /*========================
         revolusi
@@ -2942,6 +2955,19 @@ width:92%;
         height: 50px;
     }
 
+     .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service-card {
+        min-height: 335px;
+    }
+
+    .service-header {
+        text-align: left;
+        max-width: 720px;
+    }
+
 /* ======RATING====== */ 
 
     .rating-content {
@@ -3231,10 +3257,30 @@ DESKTOP
         font-size: 20px;
     }
 
+     .service-showcase {
+        padding: 120px 60px;
+    }
 
+    .service-header h2 {
+        font-size: 54px;
+    }
 
+    .service-grid {
+        gap: 26px;
+    }
 
+    .service-card {
+        padding: 30px;
+        min-height: 360px;
+    }
 
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+    .service-card p {
+        font-size: 15px;
+    }
 
 /* ======RATING====== */ 
 

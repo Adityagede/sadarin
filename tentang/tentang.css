@@ -879,6 +879,11 @@ transform:translateY(-2px);
     transform: scale(1.2);
 }
 
+.li-head a.active  {
+    color: var(--primary);
+}
+
+
 /* DROPDOWN */
 .dropdown {
     position: relative;
@@ -1563,6 +1568,13 @@ transform:translateY(-2px);
     color: #333;
 }
 
+.footer-col p a:hover {
+    color: rgb(0, 0, 0)32;
+    font-weight: bold;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
 .footer-col h3 {
     font-size: 20px;
     color: #3B3C4B;
@@ -2075,13 +2087,6 @@ padding:10px 18px;
 .mobile-card{
 width:92%;
 }
-
-
-
-
-
-
-
 
 .hamburger {
     display: none;
