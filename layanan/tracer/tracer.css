@@ -1827,6 +1827,20 @@ border-radius:4px;
 transition:all .35s ease;
 }
 
+.dropdown-menu li a{
+    display: flex;
+    align-items: center;         /* Membuat gambar & teks sejajar vertikal di tengah */
+    text-decoration: none;
+    color: #333333;              /* Warna teks default */
+    font-family: sans-serif;     /* Sesuaikan font web Sadarin */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+
 .bg-hero {
 position:absolute;
 

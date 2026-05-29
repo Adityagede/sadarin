@@ -413,6 +413,58 @@ button{
 
 
 /* =========================================
+   HAMBURGER
+========================================= */
+
+.hamburger{
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+/* LINE */
+.hamburger span{
+    width: 26px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: #16a34a;
+
+    transition: .4s ease;
+}
+
+/* ACTIVE */
+.hamburger.active span:nth-child(1){
+    transform:
+        rotate(45deg)
+        translateY(12px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:
+        rotate(-45deg)
+        translateY(-12px);
+}
+
+
+/* =========================================
    OVERLAY
 ========================================= */
 
@@ -857,7 +909,7 @@ button{
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 47px;
+    gap: 35px;
     list-style: none;
 }
 
@@ -946,6 +998,13 @@ transform:translateY(-2px);
 .dropdown-menu li a:hover {
     background: #f3f3f3;
     color: #2ea043;
+}
+
+.dropdown-menu li a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 /* SHOW DROPDOWN */
@@ -1411,6 +1470,19 @@ gap: 40px;
 
 }
 
+.dropdown-menu li a{
+    display: flex;
+    align-items: center;       
+    text-decoration: none;
+    color: #333333;             
+    font-family: sans-serif;     
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
 .li-head a {
     font-size: 13px;
 }
@@ -1579,6 +1651,11 @@ width:92%;
 .hero p{
     font-size:13px;
     width:80%;
+}
+
+.hero-card{
+    width:110%;
+    padding-right:60;
 }
 
 .section-title h2{

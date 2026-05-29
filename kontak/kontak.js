@@ -139,9 +139,9 @@ document.querySelector("#imgKontak img");
 // LIST IMAGE
 const kontakImages = [
 
-    "/asset/img/kontak-hero.jpg",
-    "/asset/img/kontak-hero1.jpg",
-    "/asset/img/kontak-hero2.jpg"
+    "../asset/img/kontak-hero.jpg",
+    "../asset/img/kontak-hero1.jpg",
+    "../asset/img/kontak-hero2.jpg"
 
 ];
 

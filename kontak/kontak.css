@@ -1665,6 +1665,10 @@ transform:translateY(-2px);
     color: #333;
     margin-top: 8px;
 }
+.footer-col p a {
+    text-decoration:none;
+    color: #333;
+}
 
 .footer-col h3 {
     font-size: 20px;

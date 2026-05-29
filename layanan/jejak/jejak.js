@@ -177,10 +177,18 @@ const kertasSvg = `
                                 </svg>`;
 
 const elektronikSvg = `
- <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2v20"></path>
-                                    <path d="M17 5H9a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"></path>
-                                </svg>`;
+ <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F1C40F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                                                </svg>`;
 
 function renderActivities(){
 

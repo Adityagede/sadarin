@@ -1558,6 +1558,11 @@ transform:translateY(-2px);
     margin-top: 8px;
 }
 
+.footer-col p a {
+    text-decoration: none;
+    color: #333;
+}
+
 .footer-col h3 {
     font-size: 20px;
     color: #3B3C4B;

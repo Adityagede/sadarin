@@ -56,7 +56,7 @@
                 <span></span>
                  </div>
         <div class="mobile-card">
-            <a href="../../index.html" class="active">
+            <a href="../../index.html">
                 <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 10L12 3L21 10V20H3V10Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
                 Beranda
             </a>
@@ -73,14 +73,14 @@
 
         <span>Layanan</span>
 
-        <svg class="dropdown-arrow" viewBox="0 0 24 24">
+        <svg class="d   ropdown-arrow" viewBox="0 0 24 24">
             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
         </svg>
     </div>
 
     <div class="mobile-dropdown-content">
         <a href="../../layanan/jejak/jejak.html"><img src="../../asset/img/naik.png" alt="">JejakHijau</a>
-        <a href="../../layanan/analisa/analisa.html"><img src="../../asset/img/bumi 2.png" alt="">BumiMeter</a>
+        <a href="../../layanan/bumi/bumi.html" class="active"><img src="../../asset/img/bumi 2.png" alt="">BumiMeter</a>
         <a href="../../layanan/tracer/tracer.html"><img src="../../asset/img/kilometer 2.png" alt="">SadarPoint</a>
         <a href="../../layanan/rekomendasi/rekomendasi.html"><img src="../../asset/img/manusia 2.png" alt="">SaranHijau</a>
     </div>
@@ -184,28 +184,61 @@
     <div class="simulation-grid">
         <div class="simulation-card" data-type="Plastik" data-aos="fade-up" data-aos-delay="300">
             <div class="sim-top">
-                <div class="sim-icon blue">🧴</div>
+                <div class="sim-icon green">
+                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                         <line x1="9" y1="2" x2="15" y2="2"></line>
+                         <path d="M7 21h10a2 2 0 0 0 2-2V10l-3-4V3a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v3L5 10v9a2 2 0 0 0 2 2z"></path>
+                                                    <line x1="5" y1="10" x2="19" y2="10"></line>
+                                                    <path d="M12 10v11"></path>
+                                                </svg>
+                </div>
                 <h3>Plastik</h3>
             </div>
             <p>Membutuhkan ratusan tahun untuk terurai dan berpotensi mencemari laut.</p>
         </div>
         <div class="simulation-card" data-type="Organik" data-aos="fade-up" data-aos-delay="600">
             <div class="sim-top">
-                <div class="sim-icon green">🥬</div>
+                <div class="sim-icon yellow">
+                     <svg viewBox="0 0 24 24" fill="none" stroke="#D3BA29" stroke-width="2">
+                                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8h-5a7 7 0 0 0-5 10Z"/>
+                                        <path d="M3 21c3-2 3-5 5-8"/>
+                                    </svg>
+                </div>
                 <h3>Organik</h3>
             </div>
             <p>Dapat terurai alami namun menghasilkan gas metana jika menumpuk.</p>
         </div>
         <div class="simulation-card" data-type="Kertas" data-aos="fade-up" data-aos-delay="900">
             <div class="sim-top">
-                <div class="sim-icon yellow">📄</div>
+                <div class="sim-icon blue">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                                </svg>
+                </div>
                 <h3>Kertas</h3>
             </div>
             <p>Bisa didaur ulang dan membantu mengurangi penebangan pohon.</p>
         </div>
         <div class="simulation-card" data-type="Elektronik" data-aos="fade-up" data-aos-delay="1200">
             <div class="sim-top">
-                <div class="sim-icon red">🔋</div>
+                <div class="sim-icon red">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F1C40F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                                                </svg>
+                </div>
                 <h3>Elektronik</h3>
             </div>
             <p>Mengandung zat berbahaya yang dapat mencemari tanah dan air.</p>
@@ -232,9 +265,15 @@
             </div>
         </div>
         <button class="analyze-btn" id="analyzeBtn">
-            Analisa Dampak 🌍
+            Analisa Dampak 
         </button>
+
+
             <div class="result-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="result-img">
+                <img src="../../asset/img/bumi-sil.jpg" alt="bumi-">
+                </div>
+                <div class="result-info">
                 <h2 id="resultTitle">Dampak Plastik</h2>
                 <p id="resultDesc">
                     Sampah plastik membutuhkan waktu sangat lama untuk terurai dan dapat mencemari lingkungan laut.
@@ -257,6 +296,7 @@
                         <p>Saran Perbaikan</p>
                     </div>
                 </div>
+                </div>
             </div>
     </section>
 
@@ -269,26 +309,26 @@
     <section class="fact-section" data-aos="fade-up" data-aos-delay="600"> 
         <div class="fact-grid">
             <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
-                <h3>🌊 Laut Tercemar</h3>
+                <h3> Laut Tercemar</h3>
                 <p>Jutaan ton sampah plastik masuk ke laut setiap tahunnya dan membahayakan ekosistem laut.</p>
             </div>
             <div class="fact-card" data-aos="fade-up" data-aos-delay="600">
-                <h3>🌳 Daur Ulang</h3>
+                <h3> Daur Ulang</h3>
                 <p>Mendaur ulang satu ton kertas dapat menyelamatkan hingga 17 pohon.</p>
             </div>
             <div class="fact-card" data-aos="fade-up" data-aos-delay="900">
-                <h3>⚡ Elektronik</h3>
+                <h3> Elektronik</h3>
                 <p>Limbah elektronik mengandung bahan kimia yang berbahaya jika dibuang sembarangan.</p>
             </div>
             <div class="fact-card" data-aos="fade-up" data-aos-delay="1200">
-                <h3>♻️ Organik</h3>
+                <h3> Organik</h3>
                 <p>Sampah organik dapat dimanfaatkan kembali menjadi kompos yang bermanfaat.</p>
             </div>
         </div>
     </section>
 
 </main>
- <script type="module" src="index.js"></script>
+ <script type="module" src="bumi.js"></script>
 
 <!-- AOS tetap -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -302,4 +342,4 @@
 </script>
 </body>
 </html>
-```
+
