@@ -1064,7 +1064,7 @@ transform:translateY(-2px);
     }
 
     .hero-btn:active::before {
-        pacity: 0.6;
+        opacity: 0.6;
     }
 
 
@@ -1464,6 +1464,7 @@ transform:translateY(-2px);
     #84cc16,
     #65a30d
     );
+    width: 70%;
 }
 
 .habit-card p{

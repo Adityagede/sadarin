@@ -1218,7 +1218,7 @@ button{
 }
 
 .result-img img {
-     filter: brightness(0.76);
+     filter: brightness(70%);
     position: absolute;
     overflow: hidden;
     border-radius: 20px;

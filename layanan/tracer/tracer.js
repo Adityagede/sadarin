@@ -74,35 +74,35 @@ const levelData = [
     {
         min:0,
         max:99,
-        title:'Eco Starter',
+        title:'Pemula',
         icon:'🌱',
         next:'Green Learner'
     },
     {
         min:100,
         max:249,
-        title:'Green Learner',
+        title:'Mulai Beraksi',
         icon:'🌿',
         next:'Waste Warrior'
     },
     {
         min:250,
         max:499,
-        title:'Waste Warrior',
+        title:'Pejuang Sampah',
         icon:'♻️',
         next:'Earth Guardian'
     },
     {
         min:500,
         max:899,
-        title:'Earth Guardian',
+        title:'penjaga Bumi',
         icon:'🌍',
         next:'Eco Hero'
     },
     {
         min:900,
         max:1499,
-        title:'Eco Hero',
+        title:'Pahlawan Ekologi',
         icon:'🏆',
         next:'Legend Hijau'
     },

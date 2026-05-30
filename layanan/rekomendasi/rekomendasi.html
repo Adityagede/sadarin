@@ -181,8 +181,8 @@
         <section class="form-section" data-aos="fade-up" data-aos-delay="600">
             <div class="input-grid">
                 <div class="input-group">
-                    <label>Jenis Sampah Dominan</label>
-                    <select id="wasteType">
+                    <label for="wasteType">Jenis Sampah Dominan</label>
+                    <select id="wasteType" name="wasteType">
                         <option>Plastik</option>
                         <option>Organik</option>
                         <option>Kertas</option>
@@ -190,24 +190,24 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>Frekuensi Penggunaan Plastik</label>
-                    <select id="plasticUsage">
+                    <label for="plasticUsage">Frekuensi Penggunaan Plastik</label>
+                    <select id="plasticUsage" name="plasticUsage">
                         <option>Rendah</option>
                         <option>Sedang</option>
                         <option>Tinggi</option>
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>Kebiasaan Daur Ulang</label>
-                    <select id="recycleHabit">
+                    <label for="recycleHabit">Kebiasaan Daur Ulang</label>
+                    <select id="recycleHabit" name="recycleHabit">
                         <option>Jarang</option>
                         <option>Kadang-kadang</option>
                         <option>Sering</option>
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>Transportasi Harian</label>
-                    <select id="transportType">
+                    <label for="transportType">Transportasi Harian</label>
+                    <select id="transportType" name="transportType">
                         <option>Motor</option>
                         <option>Mobil</option>
                         <option>Sepeda</option>
@@ -215,9 +215,9 @@
                     </select>
                 </div>
             </div>
-            <div class="input-group" style="margin-top:18px;">
-                <label>Ceritakan Aktivitas Harianmu</label>
-                <textarea id="dailyActivity" rows="5" placeholder="Contoh: Saya sering membeli minuman kemasan plastik dan jarang membawa tumbler..."></textarea>   
+            <div class="input-group">
+                <label for="dailyActivity">Ceritakan Aktivitas Harianmu</label>
+                <textarea id="dailyActivity" name="dailyActivity" rows="5" placeholder="Contoh: Saya sering membeli minuman kemasan plastik dan jarang membawa tumbler..."></textarea>   
             </div>
             <button class="generate-btn" id="generateBtn">
                 Buat Rekomendasi Pintar
@@ -288,7 +288,7 @@
                         <span>78%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width:78%;"></div>
+                        <div class="progress-fill"></div>
                     </div>
                     <p>Kamu mulai mengurangi penggunaan plastik harian.</p>
                 </div>
@@ -298,7 +298,7 @@
                         <span>62%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width:62%;"></div>
+                        <div class="progress-fill"></div>
                     </div>
                     <p>Kebiasaan memilah sampah semakin meningkat.</p>
                 </div>
@@ -308,7 +308,7 @@
                         <span>41%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width:41%;"></div>
+                        <div class="progress-fill"></div>
                     </div>
                     <p>Mulai gunakan transportasi yang lebih ramah lingkungan.</p>
                 </div>
@@ -318,7 +318,7 @@
                         <span>85%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width:85%;"></div>
+                        <div class="progress-fill"></div>
                     </div>
                     <p>Kamu sudah cukup baik dalam menghemat energi harian.</p>
                 </div>

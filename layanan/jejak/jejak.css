@@ -1112,8 +1112,7 @@ transform:translateY(-2px);
 
     background:
     conic-gradient(
-    #4CAF46 0deg,
-    #4CAF46 230deg,
+   
     #f9f4f4 230deg
     );
     
@@ -1468,7 +1467,7 @@ transform:translateY(-2px);
     border-radius:22px;
 
     padding:18px;
-
+      -webkit-backdrop-filter: blur(22px);
     backdrop-filter:blur(10px);
 }
 
@@ -1726,7 +1725,7 @@ width:92%;
 }
 
 .hero h1{
-    font-size:48px;
+    font-size:60px;
     width:80%;
 }
 

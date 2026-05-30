@@ -7,8 +7,11 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 const totalKg = document.getElementById('totalKg');
 const activityCount = document.getElementById('activityCount');
 const co2Saved = document.getElementById('co2Saved');
+const heroLevel = document.getElementById('heroLevel');
+const heroLevelName = document.getElementById('heroLevelName');
 const impactKg = document.getElementById('impactKg');
 const impactPoint = document.getElementById('impactPoint');
+const progressCircle = document.querySelector('.progress-circle');
 
 
 const premiumWa = document.querySelector('.sadarin-float');
@@ -136,6 +139,7 @@ menuClose.addEventListener("click", () => {
 
 
 
+
 let activities = JSON.parse(localStorage.getItem('sadarinActivities')) || [];
 
 cards.forEach(card => {
@@ -189,6 +193,196 @@ const elektronikSvg = `
                                                     <line x1="1" y1="9" x2="4" y2="9"></line>
                                                     <line x1="1" y1="15" x2="4" y2="15"></line>
                                                 </svg>`;
+
+function getCurrentLevelData(totalPoint) {
+    if (totalPoint >= 1500) {
+        return {
+            level: 'Lv.6',
+            name: 'Legend Hijau',
+            min: 1500,
+            max: 1500
+        };
+    }
+
+    if (totalPoint >= 900) {
+        return {
+            level: 'Lv.5',
+            name: 'Eco Hero',
+            min: 900,
+            max: 1499
+        };
+    }
+
+    if (totalPoint >= 500) {
+        return {
+            level: 'Lv.4',
+            name: 'Earth Guardian',
+            min: 500,
+            max: 899
+        };
+    }
+
+    if (totalPoint >= 250) {
+        return {
+            level: 'Lv.3',
+            name: 'Waste Warrior',
+            min: 250,
+            max: 499
+        };
+    }
+
+    if (totalPoint >= 100) {
+        return {
+            level: 'Lv.2',
+            name: 'Green Learner',
+            min: 100,
+            max: 249
+        };
+    }
+
+    return {
+        level: 'Lv.1',
+        name: 'Eco Starter',
+        min: 0,
+        max: 99
+    };
+}
+
+function updateProgressCircle(totalPoint) {
+    const progressCircle = document.querySelector('.progress-circle');
+
+    const currentLevel = getCurrentLevelData(totalPoint);
+
+    let progress = 0;
+
+    if (currentLevel.name === 'Legend Hijau') {
+        progress = 1;
+    } else {
+        const levelRange = currentLevel.max - currentLevel.min + 1;
+        const currentProgress = totalPoint - currentLevel.min;
+
+        progress = currentProgress / levelRange;
+    }
+
+    const degree = Math.min(progress, 1) * 360;
+
+    if (progressCircle) {
+        progressCircle.style.background = `
+            conic-gradient(
+                #22c55e 0deg,
+                #22c55e ${degree}deg,
+                #e5eaf2 ${degree}deg,
+                #e5eaf2 360deg
+            )
+        `;
+    }
+
+    const heroLevel = document.getElementById('heroLevel');
+    const heroLevelName = document.getElementById('heroLevelName');
+
+    if (heroLevel) {
+        heroLevel.innerText = currentLevel.level;
+    }
+
+    if (heroLevelName) {
+        heroLevelName.innerText = currentLevel.name;
+    }
+}
+
+function getCurrentLevelData(totalPoint) {
+    if (totalPoint >= 1500) {
+        return {
+            level: 'Lv.6',
+            name: 'Legend Hijau',
+            min: 1500,
+            max: 1500
+        };
+    }
+
+    if (totalPoint >= 900) {
+        return {
+            level: 'Lv.5',
+            name: 'Eco Hero',
+            min: 900,
+            max: 1499
+        };
+    }
+
+    if (totalPoint >= 500) {
+        return {
+            level: 'Lv.4',
+            name: 'Earth Guardian',
+            min: 500,
+            max: 899
+        };
+    }
+
+    if (totalPoint >= 250) {
+        return {
+            level: 'Lv.3',
+            name: 'Waste Warrior',
+            min: 250,
+            max: 499
+        };
+    }
+
+    if (totalPoint >= 100) {
+        return {
+            level: 'Lv.2',
+            name: 'Green Learner',
+            min: 100,
+            max: 249
+        };
+    }
+
+    return {
+        level: 'Lv.1',
+        name: 'Eco Starter',
+        min: 0,
+        max: 99
+    };
+}
+
+function updateProgressCircle(totalPoint) {
+    const progressCircle = document.querySelector('.progress-circle');
+
+    const currentLevel = getCurrentLevelData(totalPoint);
+
+    let progress = 0;
+
+    if (currentLevel.name === 'Legend Hijau') {
+        progress = 1;
+    } else {
+        const levelRange = currentLevel.max - currentLevel.min + 1;
+        const currentProgress = totalPoint - currentLevel.min;
+
+        progress = currentProgress / levelRange;
+    }
+
+    const degree = Math.min(progress, 1) * 360;
+
+    if (progressCircle) {
+        progressCircle.style.background = `
+            conic-gradient(
+                #22c55e 0deg,
+                #22c55e ${degree}deg,
+                #e5eaf2 ${degree}deg,
+                #e5eaf2 360deg
+            )
+        `;
+    }
+
+    const heroLevel = document.getElementById('heroLevel');
+    const heroLevelName = document.getElementById('heroLevelName');
+
+    if (heroLevel) {
+        heroLevel.innerText = currentLevel.level;
+    }
+
+    if (heroLevelName) {
+        heroLevelName.innerText = currentLevel.name;
+    }
+}
 
 function renderActivities(){
 
@@ -254,6 +448,8 @@ totalWaste += Number(activity.amount);
 scoreDisplay.innerText = totalPoint;
 impactPoint.innerText = totalPoint;
 
+updateProgressCircle(totalPoint);
+
 const wasteText = totalWaste + 'kg';
 
 impactKg.innerText = wasteText;
@@ -292,7 +488,7 @@ JSON.stringify(activities)
 
 renderActivities();
 
-alert('Aktivitas berhasil disimpan 🌱');
+alert('Aktivitas berhasil disimpan dan mendapatkan SadarPoint!');
 
 // reset
 
