@@ -2415,15 +2415,14 @@ transition:all .35s ease;
 
 .section-header {
     display: flex;
-    flex-direction: row;
     max-width: 900px;
     width: 80%;
-    height: 70%;
-    gap: 20px;
+    height: 0%;
+    gap: 1px;
 }
 
 .section-header h2 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     flex: 1; 
 }
@@ -2447,7 +2446,7 @@ transition:all .35s ease;
 .icon-box-organic-bg svg,
 .icon-box-inorganic-bg svg,
 .icon-box-electronic-bg svg {
-    width: 70px;
+    width: 60px;
     margin-bottom: 10px;
 }
 
@@ -2886,13 +2885,13 @@ width:92%;
     }
 
     .section-header h2 {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 700;
         flex: 1; 
     }
 
     .section-header p {
-        font-size: 15px;
+        font-size: 13   px;
         flex: 1; 
         display: flex;
     }
@@ -2904,6 +2903,7 @@ width:92%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
 
 /* ======REVOLUSI====== */
