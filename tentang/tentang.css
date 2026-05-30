@@ -347,13 +347,9 @@ body {
     }
 }
 
-
-
 header {
-        min-height: 100svh;
+    min-height: 40dvh;
 }
-
-
 
 /* =========================================
    HAMBURGER
@@ -957,7 +953,7 @@ transform:translateY(-2px);
 
     width: 100%;
 
-    min-height: 80dvh;
+    min-height: 70dvh;
 
     overflow: hidden;
 
@@ -1715,6 +1711,19 @@ border-radius:4px;
 transition:all .35s ease;
 }
 
+.dropdown-menu li a{
+    display: flex;
+    align-items: center;         /* Membuat gambar & teks sejajar vertikal di tengah */
+    text-decoration: none;
+    color: #333333;              /* Warna teks default */
+    font-family: sans-serif;     /* Sesuaikan font web Sadarin */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
 .bg-hero {
 position:absolute;
 
@@ -2007,14 +2016,14 @@ transition:all .35s ease;
 
 
 .tentang-hero-content h1{
-    font-size: 50px;
+    font-size: 30px;
     width: 90%;
     text-align: center;
     padding-left: 90px;
 }
 
 .tentang-hero-content p{
-    font-size: 30px;
+    font-size: 23px;
     width: 90%;
     text-align: center;
     padding-left: 40px;
@@ -2113,6 +2122,8 @@ width:92%;
     grid-template-columns: repeat(2, 1fr);
 }
 
+
+
 .impact-header p{
     text-align: center;
     width: 80%;
@@ -2125,14 +2136,14 @@ width:92%;
 
 
 .tentang-hero-content h1{
-    font-size: 50px;
+    font-size: 30px;
     width: 90%;
     text-align: center;
     padding-left: 90px;
 }
 
 .tentang-hero-content p{
-    font-size: 40px;
+    font-size: 20px;
     width: 90%;
     text-align: center;
     padding-left: 40px;
@@ -2270,6 +2281,14 @@ DESKTOP
     padding-right: 30px;
 }
 
+.tentang-hero-content h1 {
+    font-size: 40px;
+}
+.tentang-hero-content p {
+    font-size: 20px;
+    padding-left: 80px;
+}
+
 /* ======REVOLUSI====== */
 
     .revolusi-wrapper {
@@ -2294,16 +2313,18 @@ DESKTOP
     }
 
     .revolusi-badge{
+        font-size: 20px;
         width: fit-content;
     }
 
     .revolusi-content h2 {
-        font-size: 25px;
+        font-size: 55px;
         width: 90%;
     }
 
     .revolusi-desc{
         width: 90%;
+        font-size: 20px;
     }
 
     .revolusi-features{
@@ -2313,12 +2334,105 @@ DESKTOP
 
 /* ======IMPACT====== */
 
+    .impact-header h2 {
+        font-size: 45px;
+        width: 90%;
+        padding-left: 150px;
+        text-align: center;
+
+    }
     .impact-header p {
-        padding-left: 30px;
+        font-size: 20px;
+        padding-left: 300px;
+    }
+
+    .impact-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .impact-item {
+        border-radius: 18px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.12),
+        0 1px 4px rgba(0, 0, 0, 0.08);
+        transition:
+        transform 0.32s cubic-bezier(.22, .68, 0, 1.2),
+        box-shadow 0.32s ease;
+    } 
+
+    .impact-item:hover {
+        transform: translateY(-6px) scale(1.018);
+        box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.10);
+    }
+    
+    .impact-item:active {
+        transform: translateY(-2px) scale(1.008);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+    }
+    
+   
+
+
+    .impact-overlay h3 {
+        color: #fff;
+        font-size: 2.35rem;
+        font-weight: 600;
+        margin: 0 0 0.3rem;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        transform: translateY(4px);
+        transition: transform 0.32s ease;
+    }
+
+    .impact-item:hover .impact-overlay h3,
+    .impact-item.active .impact-overlay h3 {
+        transform: translateY(0);
     }
 
 
-     .service-showcase {
+    .impact-overlay p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.30rem;
+    line-height: 1.55;
+    margin: 0;
+
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.38s ease,
+        opacity 0.32s ease 0.06s;
+    }
+
+    .impact-item:hover .impact-overlay p,
+    .impact-item.active .impact-overlay p {
+        max-height: 80px;
+        opacity: 1;
+    }
+
+
+    .impact-item::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 18px;
+        border: 2px solid transparent;
+        transition: border-color 0.28s ease;
+        pointer-events: none;
+    }
+
+    .impact-item:hover::after {
+        border-color: rgba(255, 255, 255, 0.22);
+    }
+
+
+    .service-showcase {
         padding: 120px 60px;
     }
 
@@ -2344,7 +2458,7 @@ DESKTOP
     }
 
     .hero-about {
-    padding: 60px 20px;
+    padding: 60px 200px;
     display: flex;
     gap: 200px;
     margin-left: 40px;
@@ -2363,7 +2477,7 @@ DESKTOP
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 65px;
 }
 
 .hero-about-content h2 {
@@ -2372,6 +2486,8 @@ DESKTOP
     letter-spacing: 10px;  
     font-weight: 700;
 }
+
+
 /* ======FOOTER====== */ 
 
 .footer {

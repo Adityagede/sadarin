@@ -1,3 +1,61 @@
+// =========================================
+// PREMIUM MOBILE MENU
+// =========================================
+
+const hamburger =
+document.getElementById("hamburger");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+const menuOverlay =
+document.getElementById("menuOverlay");
+
+// TOGGLE MENU
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+    menuOverlay.classList.toggle("active");
+});
+
+// CLOSE SAAT KLIK OVERLAY
+menuOverlay.addEventListener("click", () => {
+
+    hamburger.classList.remove("active");
+
+    mobileMenu.classList.remove("active");
+
+    menuOverlay.classList.remove("active");
+});
+
+//active dropdown
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+const dropdownBtn = document.querySelector(".mobile-dropdown-btn");
+
+dropdownBtn.addEventListener("click", () => {
+    mobileDropdown.classList.toggle("active");
+});
+
+// =========================================
+// CLOSE BUTTON
+// =========================================
+
+const menuClose =
+document.getElementById("menuClose");
+
+// CLOSE MENU
+menuClose.addEventListener("click", () => {
+
+    hamburger.classList.remove("active");
+
+    mobileMenu.classList.remove("active");
+
+    menuOverlay.classList.remove("active");
+});
+
 
 
 const generateBtn = document.getElementById('generateBtn');
@@ -19,7 +77,31 @@ title:'Gunakan Tas Reusable',
 desc:'Biasakan membawa tas belanja sendiri saat pergi ke supermarket atau minimarket.'
 },
 {
-icon:'♻️',
+icon:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="55" height="55">
+                <circle cx="50" cy="50" r="45" fill="#f0fdf4" />
+
+                <g transform="translate(50, 52)">
+                    
+                    <g transform="rotate(0)">
+                    <polygon points="-6,-24 8,-21 4,-14 -6,-17" fill="#15803d" />
+                    <polygon points="-18,-18 4,-26 0,-6 -14,2" fill="#86efac" />
+                    <polygon points="4,-11 14,-5 5,3" fill="#22c55e" />
+                    </g>
+
+                    <g transform="rotate(120)">
+                    <polygon points="-6,-24 8,-21 4,-14 -6,-17" fill="#166534" />
+                    <polygon points="-18,-18 4,-26 0,-6 -14,2" fill="#4ade80" />
+                    <polygon points="4,-11 14,-5 5,3" fill="#22c55e" />
+                    </g>
+
+                    <g transform="rotate(240)">
+                    <polygon points="-6,-24 8,-21 4,-14 -6,-17" fill="#334155" />
+                    <polygon points="-18,-18 4,-26 0,-6 -14,2" fill="#22c55e" />
+                    <polygon points="4,-11 14,-5 5,3" fill="#4ade80" />
+                    </g>
+                    
+                </g>
+                </svg>`,
 title:'Pisahkan Sampah Plastik',
 desc:'Pisahkan sampah plastik agar lebih mudah didaur ulang dan tidak mencemari lingkungan.'
 }
@@ -134,7 +216,7 @@ desc:'Kebiasaan penggunaan plastikmu cukup tinggi. Mulai gunakan produk reusable
 if(recycleHabit === 'Jarang'){
 
 resultSection.innerHTML += createRecommendation({
-icon:'♻️',
+icon:``,
 title:'Mulai Daur Ulang',
 desc:'Cobalah mulai memilah sampah organik dan anorganik agar lebih mudah dikelola.'
 });

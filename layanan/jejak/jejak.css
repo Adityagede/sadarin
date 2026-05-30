@@ -1217,9 +1217,33 @@ transform:translateY(-2px);
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
-.category-card.active{
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    transform:translateY(-5px);
+.category-card[data-type="Plastik"].active{
+    border-color:rgba(46, 204, 113, 0.4);
+    transform:translateY(-6px);
+    box-shadow: 0 12px 32px -4px rgba(46, 204, 113, 0.22),
+                    0 4px 12px -2px rgba(46, 204, 113, 0.12),
+                    0 0 0 1px rgba(46, 204, 113, 0.25);
+}
+.category-card[data-type="Organik"].active {
+    border-color: rgba(211, 186, 41, 0.45);
+    transform:translateY(-6px);
+    box-shadow: 0 12px 32px -4px rgba(211, 186, 41, 0.25),
+                    0 4px 12px -2px rgba(211, 186, 41, 0.14),
+                    0 0 0 1px rgba(211, 186, 41, 0.30);
+}
+.category-card[data-type="Kertas"].active {
+    border-color: rgba(74, 144, 226, 0.42);
+    transform:translateY(-6px);
+    box-shadow: 0 12px 32px -4px rgba(74, 144, 226, 0.22),
+            0 4px 12px -2px rgba(74, 144, 226, 0.12),
+            0 0 0 1px rgba(74, 144, 226, 0.28);
+}
+.category-card[data-type="Elektronik"].active {
+    border-color: rgba(241, 196, 15, 0.50);
+    transform:translateY(-6px);
+    box-shadow: 0 12px 32px -4px rgba(241, 196, 15, 0.25),
+                    0 4px 12px -2px rgba(241, 196, 15, 0.15),
+                    0 0 0 1px rgba(241, 196, 15, 0.35);
 }
 
 .category-icon{
@@ -1332,7 +1356,7 @@ transform:translateY(-2px);
     background:white;
     border-radius:24px;
     padding:20px;
-     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -1507,6 +1531,19 @@ background:#2E7D32;
 border-radius:4px;
 
 transition:all .35s ease;
+}
+
+.dropdown-menu li a{
+    display: flex;
+    align-items: center;         /* Membuat gambar & teks sejajar vertikal di tengah */
+    text-decoration: none;
+    color: #333333;              /* Warna teks default */
+    font-family: sans-serif;     /* Sesuaikan font web Sadarin */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
 }
 
 .container{
@@ -1718,5 +1755,147 @@ width:92%;
 .category-grid{
     grid-template-columns:repeat(4,1fr);
 }
+    
+    .category-card {
+        background: #ffffff;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        padding: 1.25rem 1rem 1rem;
+        cursor: pointer;
+        transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1),
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .category-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        pointer-events: none;
+    }
+
+    .category-card[data-type="Plastik"]::before {
+            background: radial-gradient(ellipse at top left, rgba(46, 204, 113, 0.08) 0%, transparent 70%);
+    }
+    .category-card[data-type="Organik"]::before {
+        background: radial-gradient(ellipse at top left, rgba(211, 186, 41, 0.10) 0%, transparent 70%);
+    }
+    .category-card[data-type="Kertas"]::before {
+        background: radial-gradient(ellipse at top left, rgba(74, 144, 226, 0.09) 0%, transparent 70%);
+    }
+    .category-card[data-type="Elektronik"]::before {
+        background: radial-gradient(ellipse at top left, rgba(241, 196, 15, 0.10) 0%, transparent 70%);
+    }
+
+    
+    .category-card:hover {
+        transform: translateY(-6px) scale(1.02);
+    }
+
+    
+    .category-card[data-type="Plastik"]:hover,
+    .category-card[data-type="Plastik"].active {
+        box-shadow: 0 12px 32px -4px rgba(46, 204, 113, 0.22),
+                    0 4px 12px -2px rgba(46, 204, 113, 0.12),
+                    0 0 0 1px rgba(46, 204, 113, 0.25);
+        border-color: rgba(46, 204, 113, 0.4);
+    }
+    .category-card[data-type="Organik"]:hover,
+    .category-card[data-type="Organik"].active {
+        box-shadow: 0 12px 32px -4px rgba(211, 186, 41, 0.25),
+                    0 4px 12px -2px rgba(211, 186, 41, 0.14),
+                    0 0 0 1px rgba(211, 186, 41, 0.30);
+        border-color: rgba(211, 186, 41, 0.45);
+    }
+    .category-card[data-type="Kertas"]:hover,
+    .category-card[data-type="Kertas"].active {
+        box-shadow: 0 12px 32px -4px rgba(74, 144, 226, 0.22),
+                    0 4px 12px -2px rgba(74, 144, 226, 0.12),
+                    0 0 0 1px rgba(74, 144, 226, 0.28);
+        border-color: rgba(74, 144, 226, 0.42);
+    }
+    .category-card[data-type="Elektronik"]:hover,
+    .category-card[data-type="Elektronik"].active {
+        box-shadow: 0 12px 32px -4px rgba(241, 196, 15, 0.25),
+                    0 4px 12px -2px rgba(241, 196, 15, 0.15),
+                    0 0 0 1px rgba(241, 196, 15, 0.35);
+        border-color: rgba(241, 196, 15, 0.50);
+    }
+
+    
+    .category-card:hover::before,
+    .category-card.active::before {
+        opacity: 1;
+    }
+
+    
+    .category-card.active {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    
+    .category-icon {
+        transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1);
+    }
+    .category-card:hover .category-icon,
+    .category-card.active .category-icon {
+        transform: scale(1.12) rotate(-4deg);
+    }
+
+
+    
+    .input-section {
+        background: #ffffff;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        padding: 1.5rem;
+    }
+
+    .input-section select,
+    .input-section input[type="number"],
+    .input-section input[type="text"] {
+        width: 100%;
+        padding: 10px 14px;
+        border: 0.5px solid rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        background: #fafafa;
+    }
+
+    .input-section select:focus,
+    .input-section input:focus {
+        border-color: rgba(46, 204, 113, 0.5);
+        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+    }
+
+    .submit-btn {
+        margin-top: 1rem;
+        padding: 12px 28px;
+        background: #2ECC71;
+        color: #ffffff;
+        border: none;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: transform 0.2s cubic-bezier(.34, 1.56, .64, 1),
+                    box-shadow 0.2s ease;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 20px -4px rgba(46, 204, 113, 0.35);
+    }
+
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
 
 }

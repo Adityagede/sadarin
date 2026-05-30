@@ -1,3 +1,65 @@
+// =========================================
+// PREMIUM MOBILE MENU
+// =========================================
+
+const hamburger =
+document.getElementById("hamburger");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+const menuOverlay =
+document.getElementById("menuOverlay");
+
+// TOGGLE MENU
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+    menuOverlay.classList.toggle("active");
+});
+
+// CLOSE SAAT KLIK OVERLAY
+menuOverlay.addEventListener("click", () => {
+
+    hamburger.classList.remove("active");
+
+    mobileMenu.classList.remove("active");
+
+    menuOverlay.classList.remove("active");
+});
+
+//active dropdown
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+const dropdownBtn = document.querySelector(".mobile-dropdown-btn");
+
+dropdownBtn.addEventListener("click", () => {
+    mobileDropdown.classList.toggle("active");
+});
+
+// =========================================
+// CLOSE BUTTON
+// =========================================
+
+const menuClose =
+document.getElementById("menuClose");
+
+// CLOSE MENU
+menuClose.addEventListener("click", () => {
+
+    hamburger.classList.remove("active");
+
+    mobileMenu.classList.remove("active");
+
+    menuOverlay.classList.remove("active");
+});
+
+
+
+
+
 
 /* ===============================
    SADARPOINT CONNECTED TO JEJAKHIJAU
@@ -247,10 +309,36 @@ function renderCategory(stats){
     categoryList.innerHTML = '';
 
     const categoryIcons = {
-        Plastik:'🧴',
-        Organik:'🥬',
-        Kertas:'📄',
-        Elektronik:'🔋'
+        Plastik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 21h10a2 2 0 0 0 2-2V10l-3-4V3a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v3L5 10v9a2 2 0 0 0 2 2z"></path>
+                                    <line x1="9" y1="2" x2="15" y2="2"></line>
+                                    <line x1="5" y1="10" x2="19" y2="10"></line>
+                                    <path d="M12 10v11"></path>
+                                </svg>`,
+        Organik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#D3BA29" stroke-width="2">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8h-5a7 7 0 0 0-5 10Z"/>
+                    <path d="M3 21c3-2 3-5 5-8"/>
+                </svg>`,
+
+        Kertas:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>`,
+        Elektronik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F1C40F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                                                </svg>`,
     };
 
     const fillClass = {
@@ -299,10 +387,36 @@ function renderTimeline(){
     }
 
     const icons = {
-        Plastik:'🧴',
-        Organik:'🥬',
-        Kertas:'📄',
-        Elektronik:'🔋'
+         Plastik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 21h10a2 2 0 0 0 2-2V10l-3-4V3a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v3L5 10v9a2 2 0 0 0 2 2z"></path>
+                                    <line x1="9" y1="2" x2="15" y2="2"></line>
+                                    <line x1="5" y1="10" x2="19" y2="10"></line>
+                                    <path d="M12 10v11"></path>
+                                </svg>`,
+        Organik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#D3BA29" stroke-width="2">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8h-5a7 7 0 0 0-5 10Z"/>
+                    <path d="M3 21c3-2 3-5 5-8"/>
+                </svg>`,
+
+        Kertas:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>`,
+        Elektronik:`<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F1C40F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                                                </svg>`,
     };
 
     const recentActivities = activities.slice(-5).reverse();

@@ -353,7 +353,7 @@ body {
 
 
 header {
-        min-height: 100svh;
+        min-height: 80svh;
 }
 
 
@@ -982,7 +982,7 @@ transform:translateY(-2px);
 
     width: 100%;
 
-    min-height: 80dvh;
+    min-height: 70dvh;
 
     overflow: hidden;
 
@@ -2086,21 +2086,10 @@ width:92%;
     transition:all .35s ease;
 }   
 
-.kontak-card {
-    margin-left:200px;
-}
 
-.contact-car-sec {
-    margin-left: 100px;
-}
 
 /* info kontak */
 
-.main-gabungan{
-    display:flex;
-    padding-left:20px;
-    padding-right:20px;
-}
 
 
 .hero-about{
@@ -2186,6 +2175,12 @@ DESKTOP
         display: none;
     }
 
+.kontak-content h1 {
+    font-size: 40px;
+}
+.kontak-content p {
+    font-size: 20px;
+}
 
 /* ======INFO KONTAK====== */ 
 
@@ -2195,16 +2190,18 @@ DESKTOP
     }
 
 .kontak-sec{
-    width: 40%;
+    width: 30%;
     
 }
 
 .kontak-card{
-    height: 600px;
+    height: 700px;
 }
 
 
-
+.contact-section{
+    width: 70%;
+}
 
 .contact-header h2{
     font-size: 27px;
@@ -2228,25 +2225,34 @@ DESKTOP
 }
 
 /* ======BERGABUNG====== */ 
-.hero-about{
-padding: 50px 20px;
-display:flex;
+.hero-about {
+    padding: 60px 200px;
+    display: flex;
+    gap: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.hero-about-image {
+    margin-top: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    border: 5px solid #dfe7e2;
 }
 
 .hero-about-content {
-    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
 }
 
-.hero-about-content h1{
-    padding-top: 20px;
-}
-
-.hero-about-image{
-margin-top: 0;
-width: 50%;
-height: 40%;
-
-max-width: 490px;
+.hero-about-content h2 {
+    font-size: 30px;
+    color: #2E7D32;
+    letter-spacing: 10px;  
+    font-weight: 700;
 }
 
 /* ======FOOTER====== */ 
